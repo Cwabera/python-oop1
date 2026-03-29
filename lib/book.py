@@ -2,10 +2,10 @@ class Book:
     def __init__(self, title, page_count):
         self.title = title
 
-        if not isinstance(page_count, int):
-            raise Exception("page_count must be an integer")
-
-        self.page_count = page_count
+        if isinstance(page_count, int):
+            self.page_count = page_count
+        else:
+            print("page_count must be an integer")
 
     def turn_page(self):
-        return "Flipped the page!"
+        print("Flipping the page...wow, you read fast!")
